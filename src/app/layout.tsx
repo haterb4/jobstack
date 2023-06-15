@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${popins.className} text-xs`}>{children}</body>
+      <body className={`${popins.className} text-xs font-[500] text-black`}>{children}</body>
     </html>
   )
 }

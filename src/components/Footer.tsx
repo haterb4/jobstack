@@ -5,6 +5,7 @@ import Socials from './Socials'
 import FooterLinks from './FooterLink'
 import Link from 'next/link'
 import { useWindowSize } from 'usehooks-ts'
+import Logo from './Logo'
 
 
 const Footer = () => {
@@ -58,12 +59,9 @@ const Footer = () => {
         sm:grid sm:grid-cols-2  md:flex md:justify-between md:items-start flex-wrap py-16 border-t gap-12 lg:px-56 md:px-20`
       }>
         <div>
-          <div className='py-4 mr-4 flex items-center justify-start'>
-            <div className='h-10 w-10 flex justify-center items-center bg-[#1967D3] text-white rounded-[10px]'>JS</div>
-            <Link href={''} className='px-2 ml-2 font-semibold text-sm'>Jobstack</Link>
-          </div>
+          <Logo href='' box='h-10 w-10' justify='start'/>
           <div className='py-2'>
-            <h1 className='font-semibold py-2'>Call us</h1>
+            <h1 className='font-bold py-2'>Call us</h1>
             <p className='py-2'>+237 695724963</p>
           </div>
           <div className='text-neutral-500'>
