@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionHeader from '../SectionHeader'
 import FeaturedItem from './FeaturedItem'
+import Button from '../Button'
 
 const Features = () => {
     const categories = [
@@ -108,6 +109,9 @@ const Features = () => {
           {categories.map((item, index) => {
             return <FeaturedItem key={index} feature={item}/>
           })}
+        </div>
+        <div className='w-full flex justify-center items-center'>
+          <Button text='load more listing'/>
         </div>
     </div>
   )

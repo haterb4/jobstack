@@ -1,4 +1,4 @@
-import { Header, PageLayout } from '@/components'
+import { Header, PageLayout, Testimonials } from '@/components'
 import Categories from '@/components/Job/Categories'
 import Features from '@/components/Job/Features'
 import { Metadata } from 'next'
@@ -16,8 +16,11 @@ export default function Home() {
         <div className='w-full flex flex-col justify-center items-center border-b'>
           <Categories />
         </div>
-        <div className='w-full flex flex-col justify-center items-center border-b py-12'>
+        <div className='w-full flex flex-col justify-center items-center py-12'>
           <Features />
+        </div>
+        <div className='w-full flex flex-col justify-center items-center py-12 bg-[#F0F5F8]'>
+          <Testimonials />
         </div>
       </main>
     </PageLayout>

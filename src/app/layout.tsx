@@ -1,4 +1,7 @@
 import './globals.css'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import { Nunito_Sans } from 'next/font/google'
 
 const nunito_sans = Nunito_Sans({
