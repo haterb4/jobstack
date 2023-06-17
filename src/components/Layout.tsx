@@ -8,12 +8,12 @@ const PageLayout = ({
     children: React.ReactNode
 }) => {
   return (
-    <div className='overflow-hidden min-h-screen flex flex-col justify-between items-center flex-1'>
+    <div className='overflow-hidden min-h-screen w-full flex flex-col justify-between items-center'>
         {/* header */}
         <div className='w-full relative'>
           <Navigation />
         </div>
-        <main>{children}</main>
+        <main className='w-full h-full overflow-x-hidden m-auto mt-0 mx-0'>{children}</main>
         <Footer />
         {/* footer */}
     </div>
