@@ -1,9 +1,10 @@
 import './globals.css'
-import { Poppins } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 
-const popins = Poppins({
+const nunito_sans = Nunito_Sans({
   subsets: ['latin'],
-  weight: '100'
+  weight: '300',
+  display: 'swap',
 })
 
 export const metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${popins.className} text-xs font-[500] text-black`}>{children}</body>
+      <body className={`text-xs font-[500] text-black`}>{children}</body>
     </html>
   )
 }
