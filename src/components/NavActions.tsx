@@ -1,15 +1,14 @@
 'use client'
-
-import React, { useState } from 'react'
-import NavLink from './NavLink'
-import { useWindowSize } from 'usehooks-ts'
-import { AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
+import React, { useState } from 'react'
+import { AiOutlineUser } from 'react-icons/ai'
+import { CgMenuLeft } from 'react-icons/cg'
+import { useWindowSize } from 'usehooks-ts'
 import NavLinkLatteral from './NavLinkLatteral'
 
-const NavLinks = () => {
+const NavActions = () => {
   const { width, height } = useWindowSize()
-  const [isMiddleNav, setIsMiddleNav] = useState(false)
+  const [mobileNav, setMobileNav] = useState(false)
 
   const links = [
     {
@@ -106,23 +105,30 @@ const NavLinks = () => {
     },
   ]
   return (
-    <div className='flex items-center'>
-        {width > 1200 && links.map((link, index) => {
-            return (
-                <NavLink link={link} key={index}/>
-            )
-        })}
-        {width > 750 && width <= 1200 &&(
-        <div>
-            <button onClick={() => setIsMiddleNav(!isMiddleNav)} className='w-full flex justify-between items-center hover:text-[#1967D3]'>Menu</button>
+    <div className='flex items-center justify-end text-[#1A67D3]'>
+        {width > 750 &&(
+        <div className='w-full flex items-center justify-end'>
+            <div className=''>
+                <Link href={'/cv'}><span className='w-[93px] block'>Upload your cv</span></Link>
+            </div>
+            <div className='px-6 py-[14px] bg-[#E3EAFA] rounded-[8px] ml-5'>
+                <Link href={'/authenication'}><span className='w-[98px] block'>Login / Register</span></Link>
+            </div>
+            <div className='px-6 py-[14px] bg-[#1967D3] rounded-[8px] text-white ml-5'>
+                <Link href={'/authenication'}><span className='w-[55px] block'>Job Post</span></Link>
+            </div>
         </div>)}
-        {width > 750 && width <= 1200 && isMiddleNav && 
-        (<div className='flex flex-col fixed  top-0 left-0 w-full h-screen bg-[rgba(23,23,23,0.7)] z-50'>
-            <div className={`w-[250px] h-full bg-[#101010] flex flex-col`}>
-                <button onClick={() => setIsMiddleNav(false)} className='relative z-50 text-white h-10 w-10 border rounded-md ml-2 mt-2 flex justify-center items-center mb-3'>
-                    <AiOutlineClose size={26}/>
-                </button>
-                <div className='h-[calc(100%-44px)] relative text-white  overflow-y-scroll'>
+        {width < 750 && (<div className='flex items-center justify-end text-black'>
+            <button className='h-12 w-12 flex justify-center items-center mr-3'>
+                <AiOutlineUser size={32}/>
+            </button>
+            <button onClick={() => setMobileNav(!mobileNav)} className='h-12 w-12 flex justify-center items-center'>
+                <CgMenuLeft size={32}/>
+            </button>
+        </div>)}
+        {width < 750 && mobileNav && (<div className='flex flex-col absolute  top-[80px] left-0 w-full bg-[rgba(23,23,23,0.7)] z-50'>
+            <div className={`w-full h-full  flex flex-col text-white`}>
+                <div className='h-[calc(100%-44px)] relative text-white '>
                     {links.map((link, index) => {
                         return (
                             <div className='w-full relative' key={index}>
@@ -142,4 +148,4 @@ const NavLinks = () => {
   )
 }
 
-export default NavLinks
+export default NavActions
