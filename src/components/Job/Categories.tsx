@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import SectionHeader from '../SectionHeader'
 import { JobCategorieItem } from '..'
@@ -10,8 +11,10 @@ import { BsPeopleFill} from 'react-icons/bs'
 import { FaProjectDiagram } from 'react-icons/fa'
 import { HiSpeakerphone } from 'react-icons/hi'
 import { GiTakeMyMoney } from 'react-icons/gi'
+import { useWindowSize } from 'usehooks-ts'
 
 const Categories = () => {
+  const { width, height } = useWindowSize()
   const categories = [
     {
       icon: GiTakeMyMoney,
@@ -62,7 +65,7 @@ const Categories = () => {
   return (
     <div className='py-12 bg-white'>
         <SectionHeader title='Popular Job Categories' slogan='2023 jobs live -293 added today.'/>
-        <div className='grid grid-cols-3 gap-8 py-12'>
+        <div className={`grid ${width < 710 ? 'grid-cols-1' : width > 1100 ? 'grid-cols-3' : 'grid-cols-2'} gap-8 py-12`}>
           {categories.map((item, index) => {
             return <JobCategorieItem key={index} categorie={item}/>
           })}

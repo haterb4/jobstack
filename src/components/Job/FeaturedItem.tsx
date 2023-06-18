@@ -19,6 +19,7 @@ interface FeatureItemProps {
         fulltime: boolean;
         private: boolean;
         urgent: boolean;
+        skills?: string[]
     }
 }
 
@@ -57,7 +58,6 @@ const FeaturedItem: React.FC<FeatureItemProps> = ({feature}) => {
               {feature.urgent && (<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-200 text-amber-700 mr-4 pt-1">
                 Urgent
               </span>)}
-              
             </div>
         </div>
     </div>
