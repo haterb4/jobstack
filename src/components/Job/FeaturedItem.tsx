@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdBusinessCenter } from 'react-icons/md'
-import { GiPositionMarker } from 'react-icons/gi'
+import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { BsClock } from 'react-icons/bs'
 import { FaMoneyBillWave } from 'react-icons/fa'
 interface FeatureItemProps {
@@ -36,7 +36,7 @@ const FeaturedItem: React.FC<FeatureItemProps> = ({feature}) => {
                 <span className='ml-2'>{feature.entreprise}</span>
               </div>
               <div className='flex items-center mr-3 text-[12px]'>
-                <GiPositionMarker size={15}/>
+                <HiOutlineLocationMarker size={15}/>
                 <span className='ml-2'>{feature.location}</span>
               </div>
               <div className='flex items-center mr-3 text-[12px]'>

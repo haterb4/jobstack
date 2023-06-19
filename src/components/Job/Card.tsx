@@ -1,5 +1,5 @@
 import React from 'react'
-import { GiPositionMarker } from 'react-icons/gi'
+import { HiOutlineLocationMarker } from 'react-icons/hi'
 
 interface FeatureItemProps {
     feature: {
@@ -32,7 +32,7 @@ const JobCard: React.FC<FeatureItemProps> = ({feature}) => {
         </div>
         <h2 className='text-[12px] font-[700] text-center'>{feature.post}</h2>
         <div className='flex items-center mr-3 text-[12px] py-2 text-zinc-500'>
-            <GiPositionMarker size={15}/>
+            <HiOutlineLocationMarker size={15}/>
             <span className='ml-2'>{feature.location}</span>
         </div>
         <div className='flex items-center justify-start mt-1'>

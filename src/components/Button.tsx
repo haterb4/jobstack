@@ -4,6 +4,7 @@ import React from 'react'
 interface ButtonProps {
     text: string;
     handleClick?: Function
+    containerClass?: string;
 }
 
 const Button:React.FC<ButtonProps> = ({text, handleClick}) => {
