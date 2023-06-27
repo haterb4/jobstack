@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { Nunito_Sans } from 'next/font/google'
+import { ReduxProvider } from '@/components';
 
 const nunito_sans = Nunito_Sans({
   subsets: ['latin'],
@@ -22,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`text-xs font-[500] text-black`}>{children}</body>
+      <ReduxProvider>
+        <body className={`text-xs font-[500] text-black`}>{children}</body>
+      </ReduxProvider>
     </html>
   )
 }

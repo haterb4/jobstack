@@ -16,3 +16,13 @@ export { default as NavLinks } from "./NavLinks"
 export { default as SectionHeader } from "./SectionHeader"
 export { default as Testimonials } from "./Testimonials"
 export { default as Testimonial } from "./Sliders/Testimonial"
+
+//dashboard components
+
+export { default as ANavbar } from './Admin/ANavlinks'
+export { default as Sidebar } from './Admin/Sidebar'
+export { default as SidebarLink } from './Admin/SidebarLink'
+export { default as NavRight } from './Admin/NavRight'
+
+//redux toolkit provider
+export { default as ReduxProvider } from './ReduxProvider'

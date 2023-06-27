@@ -1,13 +1,12 @@
 'use client'
 
 import React, { useState } from 'react'
-import NavLink from './NavLink'
 import { useWindowSize } from 'usehooks-ts'
 import { AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
-import NavLinkLatteral from './NavLinkLatteral'
+import {NavLinkLatteral, NavLink} from '@/components'
 
-const NavLinks = () => {
+const ANavLinks = () => {
   const { width, height } = useWindowSize()
   const [isMiddleNav, setIsMiddleNav] = useState(false)
 
@@ -118,11 +117,11 @@ const NavLinks = () => {
         </div>)}
         {width > 750 && width <= 1200 && isMiddleNav && 
         (<div className='flex flex-col fixed  top-0 left-0 w-full h-screen bg-[rgba(23,23,23,0.7)] z-50'>
-            <div className={`w-[250px] h-full bg-[#101010] flex flex-col`}>
-                <button onClick={() => setIsMiddleNav(false)} className='relative z-50 text-white h-10 w-10 border rounded-md ml-2 mt-2 flex justify-center items-center mb-3'>
-                    <AiOutlineClose size={26}/>
+            <div className={`w-[250px] h-full bg-[rgba(23,23,23,0.8)] flex flex-col`}>
+                <button onClick={() => setIsMiddleNav(false)} className='relative z-50 text-white h-8 w-8 border rounded-md ml-2 mt-2 flex justify-center items-center mb-3'>
+                    <AiOutlineClose size={24}/>
                 </button>
-                <div className='h-[calc(100%-44px)] relative text-white  overflow-y-scroll'>
+                <div className='h-[calc(100%-44px)] relative text-white latteral-scroolbar overflow-y-scroll'>
                     {links.map((link, index) => {
                         return (
                             <div className='w-full relative' key={index}>
@@ -142,4 +141,4 @@ const NavLinks = () => {
   )
 }
 
-export default NavLinks
+export default ANavLinks

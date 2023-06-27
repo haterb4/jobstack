@@ -3,6 +3,37 @@
 @tailwind utilities;
 
 
+.latteral-scroolbar::-webkit-scrollbar,
+.dashboard-scroolbar::-webkit-scrollbar{
+  @apply w-[5px];
+}
+
+.dashboard-scroolbar::-webkit-scrollbar-track{
+  @apply bg-white;
+  margin-block: 2em;
+}
+
+.latteral-scroolbar::-webkit-scrollbar-track{
+  @apply bg-[rgba(23,23,23,0.8)];
+  margin-block: 2em;
+}
+
+.dashboard-scroolbar::-webkit-scrollbar-thumb{
+  @apply bg-white rounded-lg  transition-all;
+}
+.latteral-scroolbar::-webkit-scrollbar-thumb{
+  @apply bg-[rgba(23,23,23,0.8)] rounded-lg  transition-all;
+}
+
+.latteral-scroolbar:hover::-webkit-scrollbar-thumb,
+.dashboard-scroolbar:hover::-webkit-scrollbar-thumb{
+  @apply bg-[#3479D8] rounded-lg  transition-all;
+}
+
+
+
+
+
 /* animista animations*/
 
 .slide-right {

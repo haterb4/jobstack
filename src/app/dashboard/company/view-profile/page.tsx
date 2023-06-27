@@ -9,14 +9,12 @@ const Home = () => {
   const activeDashboardPage = useAppSelector((state) => state.ActiveDashboardPage.name)
   useEffect(()=> { 
    const updateActivePage = () => {
-    dispatch(setActivePage('dashboard')) 
+    dispatch(setActivePage('view profile')) 
    }
    updateActivePage()
   }, [])
   return (
-    <main className=' flex min-h-screen flex-col items-center justify-between'>
-      <div>Home dev</div>
-    </main>
+    <div>page</div>
   )
 }
 
