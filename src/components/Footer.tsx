@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
           <div className='text-neutral-500'>
             <p className='py-2'>Yaounde Melen carrefour emia face total emia</p>
-            <p className='py-2'>hateb2803@gmail.com</p>
+            <p className='py-2'>haterb2803@gmail.com</p>
           </div>
         </div>
         {footerLinks.map((footerLink, index) => {
