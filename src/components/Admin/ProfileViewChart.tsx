@@ -51,7 +51,7 @@ const ProfileViewChart = () => {
     }
   }
   return (
-    <div className={`min-w-[300px] md:w-[48%] xl:w-[62%] ${ width < 1478 && 'w-full'} h-[420px] bg-white p-4 border rounded-lg`}>
+    <div className={`min-w-[300px] md:w-[48%] xl:w-[62%] ${ width < 1478 && 'w-full'} max-h-[420px] bg-white p-4 border rounded-lg`}>
         <div className='w-full flex justify-between items-center'>
           <h1 className='text-lg'>Your profile views</h1>
           <div className='bg-neutral-100 text-neutral-500 px-3 py-2 rounded-lg'>
