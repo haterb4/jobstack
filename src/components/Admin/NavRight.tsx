@@ -4,10 +4,9 @@ import { BsBell, BsChevronDown, BsHeart } from 'react-icons/bs'
 import { useWindowSize } from 'usehooks-ts'
 
 const NavRight = () => {
-    const { width, height } = useWindowSize()
+    const { width } = useWindowSize()
   return (
     <div className='flex items-center justify-end'>
-        {width}
         <div className='flex justify-between items-center w-24 mx-8'>
             <button className='w-8 h-8 relative flex justify-center items-center rounded'>
                 <BsHeart size={20} />

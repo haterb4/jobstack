@@ -37,7 +37,6 @@
   @apply bg-[#3479D8] rounded-lg  transition-all;
 }
 
-
 /* shadows */
 .shadow-1{
   -webkit-box-shadow: 4px 5px 23px -5px rgba(0,0,0,0.08); 
