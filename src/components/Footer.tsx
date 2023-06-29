@@ -3,7 +3,6 @@
 import React from 'react'
 import Socials from './Socials'
 import FooterLinks from './FooterLink'
-import Link from 'next/link'
 import { useWindowSize } from 'usehooks-ts'
 import Logo from './Logo'
 

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.dashboard-container::-webkit-scrollbar,
 .latteral-scroolbar::-webkit-scrollbar,
 .dashboard-scroolbar::-webkit-scrollbar{
   @apply w-[5px];
@@ -18,6 +18,11 @@
   margin-block: 2em;
 }
 
+.dashboard-container::-webkit-scrollbar-track{
+  @apply bg-[#F6F7FC];
+  margin-block: 2em;
+}
+
 .dashboard-scroolbar::-webkit-scrollbar-thumb{
   @apply bg-white rounded-lg  transition-all;
 }
@@ -25,13 +30,23 @@
   @apply bg-[rgba(23,23,23,0.8)] rounded-lg  transition-all;
 }
 
+
+.dashboard-container::-webkit-scrollbar-thumb,
 .latteral-scroolbar:hover::-webkit-scrollbar-thumb,
 .dashboard-scroolbar:hover::-webkit-scrollbar-thumb{
   @apply bg-[#3479D8] rounded-lg  transition-all;
 }
 
 
-
+/* shadows */
+.shadow-1{
+  -webkit-box-shadow: 4px 5px 23px -5px rgba(0,0,0,0.08); 
+  box-shadow: 4px 5px 23px -5px rgba(0,0,0,0.08);
+}
+.hover-shadow-1:hover{
+  -webkit-box-shadow: 4px 5px 23px -5px rgba(0,0,0,0.08); 
+  box-shadow: 4px 5px 23px -5px rgba(0,0,0,0.08);
+}
 
 
 /* animista animations*/

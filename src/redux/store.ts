@@ -2,10 +2,12 @@
 
 import { configureStore } from '@reduxjs/toolkit'
 import ActiveDashboardPageReducer from '@/redux/features/dashboard/activePageSlice'
+import sidebarExtendionReducer from '@/redux/features/dashboard/sidebarSlice'
 
 export const store = configureStore({
   reducer: {
     ActiveDashboardPage: ActiveDashboardPageReducer,
+    sidebarExtended: sidebarExtendionReducer
   },
 })
 

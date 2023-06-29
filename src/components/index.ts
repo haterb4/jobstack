@@ -23,6 +23,12 @@ export { default as ANavbar } from './Admin/ANavlinks'
 export { default as Sidebar } from './Admin/Sidebar'
 export { default as SidebarLink } from './Admin/SidebarLink'
 export { default as NavRight } from './Admin/NavRight'
+export { default as QuickStat } from './Admin/QuickStat'
+export { default as ApplicantCard } from './Admin/ApplicantCard'
+export { default as ApplicantSmallCard } from './Admin/ApplicantSmallCard'
+export { default as Notifications } from './Admin/Notiffications'
+export { default as NotificationCard } from './Admin/NotificationCard'
+export { default as ProfileViewChart } from './Admin/ProfileViewChart'
 
 //redux toolkit provider
 export { default as ReduxProvider } from './ReduxProvider'

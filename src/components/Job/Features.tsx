@@ -117,11 +117,12 @@ const Features = () => {
     <div className='py-12 bg-white'>
         <SectionHeader title='Featured Job' slogan='Knew your worth and find the job that qualify your life'/>
         <div className={`grid ${width < 710 ? 'grid-cols-1' : 'grid-cols-2'} gap-8 py-12`}>
-          {width > 1100 && categories.map((item, index) => {
-            return <FeaturedItem key={index} feature={item}/>
-          })}
-          {width <= 1100 && categories.map((item, index) => {
-            return <JobCard key={index} feature={item}/>
+          {categories.map((item, index) => {
+            return (
+              width > 1100 
+              ?(<FeaturedItem key={index} feature={item}/>)
+              :(<JobCard key={index} feature={item}/>)
+           )
           })}
         </div>
         <div className='w-full flex justify-center items-center'>

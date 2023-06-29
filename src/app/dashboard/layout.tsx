@@ -5,12 +5,15 @@ import Logo from '@/components/Logo'
 import React, { useState } from 'react'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { useWindowSize } from 'usehooks-ts'
-
+import { useAppDispatch, useAppSelector } from '@/redux/hooks'
+import { setExtension } from '@/redux/features/dashboard/sidebarSlice'
 const DashboardLayout = ({
   children,
 }: {
   children: React.ReactNode
 }) => {
+  const dispatch = useAppDispatch()
+  const sidebarExtended = useAppSelector((state) => state.sidebarExtended.isExtended)
   const [isLarge, setIsLarge] = useState<boolean>(true)
   const { width } = useWindowSize()
   return (
@@ -30,7 +33,10 @@ const DashboardLayout = ({
       </header>
       <div className='w-full m-auto mx-0 mt-0 h-[calc(100%-80px)] flex justify-between items-start relative'>
         <button
-        onClick={() => {setIsLarge((previous) => !previous) }}
+          onClick={() => {
+            setIsLarge((previous) => !previous)
+            dispatch(setExtension(!sidebarExtended))
+          }}
           className={`absolute ${isLarge ? 'left-[272px]' : 'left-[72px]'} z-40 h-8 w-5 bg-white rounded-full flex justify-center items-center top-[calc(50%-16px)] text-neutral-500 hover:text-[#1967D3]`}
         >
           {isLarge ? <FiChevronLeft size={20}/> : <FiChevronRight size={20}/>}

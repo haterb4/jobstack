@@ -2,12 +2,12 @@ import './globals.css'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-import { Nunito_Sans } from 'next/font/google'
+import { Nunito_Sans, Varela_Round } from 'next/font/google'
 import { ReduxProvider } from '@/components';
+import localFont from 'next/font/local'
 
-const nunito_sans = Nunito_Sans({
-  subsets: ['latin'],
-  weight: '300',
+const futura_now_var = localFont({
+  src: '../fonts/futura-now-var.ttf',
   display: 'swap',
 })
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ReduxProvider>
-        <body className={`text-xs font-[500] text-black`}>{children}</body>
+        <body className={futura_now_var.className+` text-xs font-[500] text-black`}>{children}</body>
       </ReduxProvider>
     </html>
   )

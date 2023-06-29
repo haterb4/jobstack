@@ -28,24 +28,24 @@ const FeaturedItem: React.FC<FeatureItemProps> = ({feature}) => {
     <div className='w-[500px] border rounded-md bg-white hover:shadow-md px-4 py-8 flex justify-between items-start'>
         <div className='w-10 h-10 rounded-lg flex justify-center items-center bg-[#ECEDF2] text-[#1A67D3] hover:bg-blue-600 hover:text-white'>   
         </div>
-        <div className='w-[calc(500px-44px)] px-4'>
+        <div className='w-[calc(500px-44px)] px-[12px]'>
             <h2 className='text-[12px] font-[700]'>{feature.post}</h2>
-            <div className='flex items-center py-2 text-zinc-500'>
+            <div className='flex items-center py-2 text-zinc-500 text-[10px]'>
               <div className='flex items-center mr-3 text-[12px]'>
                 <MdBusinessCenter size={15}/>
-                <span className='ml-2'>{feature.entreprise}</span>
+                <span className='ml-[6px]'>{feature.entreprise}</span>
               </div>
               <div className='flex items-center mr-3 text-[12px]'>
                 <HiOutlineLocationMarker size={15}/>
-                <span className='ml-2'>{feature.location}</span>
+                <span className='ml-[6px]'>{feature.location}</span>
               </div>
               <div className='flex items-center mr-3 text-[12px]'>
                 <BsClock size={15}/>
-                <span className='ml-2'>11 hours ago</span>
+                <span className='ml-[6px]'>11 hours ago</span>
               </div>
               <div className='flex items-center mr-3 text-[12px]'>
                 <FaMoneyBillWave size={15}/>
-                <span className='ml-2'>{feature.price.min} - {feature.price.max}</span>
+                <span className='ml-[6px]'>{feature.price.min} - {feature.price.max}</span>
               </div>
             </div>
             <div className='flex items-center justify-start mt-3'>
