@@ -1,13 +1,16 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Button from './Button'
 import { CiSearch } from 'react-icons/ci'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { useWindowSize } from 'usehooks-ts'
+import Link from 'next/link'
 
 const Header = () => {
   const { width, height } = useWindowSize()
+  const [jobTitle, setJobTitle] = useState('')
+  const [postCode, setPostCode] = useState('')
   return (
     <div className={`h-[550px] bg-neutral-100 w-full flex flex-col justify-center ${width < 900 ? 'items-center px-12' : 'items-start px-[17%]'}`}>
       <div className={`${width < 650 ? 'w-full' : 'w-[600px]'}`}>
@@ -20,7 +23,12 @@ const Header = () => {
                 <CiSearch size={28}/>
               </div>
               <div className={`${width > 650 ? 'w-[200px]' : 'w-full'}`}>
-                <input type="text" className='h-[40px] w-full outline-none' placeholder='Job title, keywords, or company'/>
+                <input
+                  type="text"
+                  className='h-[40px] w-full outline-none'
+                  value={jobTitle} placeholder='Job title, keywords, or company'
+                  onChange={(e) => setJobTitle(e.target.value)}
+                />
               </div>
             </div>
             {width > 650 && (<div className='w-[1px] h-[30px] bg-neutral-400 mx-4'></div>)}
@@ -29,13 +37,19 @@ const Header = () => {
                 <HiOutlineLocationMarker size={28}/>
               </div>
               <div className={`${width > 650 && 'w-full'}`}>
-                <input type="text" className='h-[40px] w-full outline-none' placeholder='City or postcode'/>
+                <input
+                  type="text"
+                  className='h-[40px] w-full outline-none'
+                  value={postCode}
+                  placeholder='City or postcode'
+                  onChange={(e) => setPostCode(e.target.value)}
+                />
               </div>
             </div>
             <div className='flex justify-center items-center w-[150px]'>
-              <button onClick={() => null} className="px-8 py-3 pt-4 rounded-md bg-blue-600 text-white capitalize">
+              <Link href={`/search/?jobt-tile=${jobTitle}&post-code=${postCode}`} className="px-8 py-3 pt-4 rounded-md bg-blue-600 text-white capitalize">
                 Find jobs
-              </button>
+              </Link>
             </div>
           </div>
         </div>

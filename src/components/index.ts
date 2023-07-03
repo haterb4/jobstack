@@ -1,5 +1,7 @@
 export { default as BlogCard } from "./Blog/Card"
 export { default as Button } from "./Button"
+export { default as CheckboxInput } from "./CheckboxInput"
+export { default as CheckBoxFilter } from "./Search/CheckBoxFilter"
 export { default as Footer } from "./Footer"
 export { default as GetStarted } from "./GetStarted"
 export { default as Filter } from "./Search/Filter"
@@ -19,9 +21,11 @@ export { default as SectionHeader } from "./SectionHeader"
 export { default as Searchbar } from "./Search/Searchbar"
 export { default as SearchInput } from "./Search/SearchInput"
 export { default as SearchSelect } from "./Search/SearchSelect"
+export { default as Select } from "./Select"
 export { default as Testimonials } from "./Testimonials"
 export { default as Testimonial } from "./Sliders/Testimonial"
 export { default as ToggleSwitch } from "./ToggleSwitch"
+export { default as ToggleFilter } from "./Search/ToggleFilter"
 
 //dashboard components
 

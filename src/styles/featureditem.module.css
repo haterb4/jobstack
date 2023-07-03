@@ -1,0 +1,10 @@
+.featureditemDescription {
+    @apply hidden;
+}
+.featureditemDescription:hover {
+    @apply block;
+}
+
+.featureditem:hover .featureditemDescription{
+    @apply block;
+}
