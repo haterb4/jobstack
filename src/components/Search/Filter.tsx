@@ -113,7 +113,7 @@ const Filter = () => {
             </div>
         </div>
         <div className='w-full mt-6'>
-            <h1 className='text-lg'>Experience Leve</h1>
+            <h1 className='text-lg'>Experience Level</h1>
             <div className='py-3 text-neutral-500'>
                 {experienceLevelFilter.map((filter, index) => {
                     return (<CheckBoxFilter key={index} filter={filter} index={index} active={index === activeDateIndex} onChange={(index: number) => {() => null}}/>)
