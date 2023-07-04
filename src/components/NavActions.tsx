@@ -109,13 +109,13 @@ const NavActions = () => {
         {width > 750 &&(
         <div className='w-full flex items-center justify-end'>
             <div className=''>
-                <Link href={'/cv'}><span className='w-[93px] block'>Upload your cv</span></Link>
+                <Link href={'/cv'}><span className='w-[110px] block'>Upload your cv</span></Link>
             </div>
             <div className='px-6 py-[14px] bg-[#E3EAFA] rounded-[8px] ml-5'>
-                <Link href={'/authenication'}><span className='w-[98px] block'>Login / Register</span></Link>
+                <Link href={'/authenication'}><span className='w-[110px] block'>Login / Register</span></Link>
             </div>
             <div className='px-6 py-[14px] bg-[#1967D3] rounded-[8px] text-white ml-5'>
-                <Link href={'/authenication'}><span className='w-[55px] block'>Job Post</span></Link>
+                <Link href={'/authenication'}><span className='w-[75px] block'>Job Post</span></Link>
             </div>
         </div>)}
         {width < 750 && (<div className='flex items-center justify-end text-black'>

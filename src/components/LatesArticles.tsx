@@ -11,21 +11,21 @@ const LatesArticles = () => {
     {
       title: 'Attract sales and profits',
       coverImage: 'Great quality',
-      intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality",
+      intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite...",
       comments: 12,
       postedAt: 'August 31, 2021'
     },
     {
       title: 'Attract sales and profits',
       coverImage: 'Great quality',
-      intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality",
+      intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite...",
       comments: 12,
       postedAt: 'August 31, 2021'
     },
     {
       title: 'Attract sales and profits',
       coverImage: 'Great quality',
-      intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality",
+      intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite...",
       comments: 12,
       postedAt: 'August 31, 2021'
     },

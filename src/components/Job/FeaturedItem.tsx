@@ -29,11 +29,12 @@ const FeaturedItem: React.FC<FeatureItemProps> = ({feature}) => {
   return (
     <div className={styles.featureditem +' min-w-[500px] w-full border rounded-md bg-white hover-shadow-1 py-8 flex justify-start items-start px-4 relative'}>
         <button className='w-8 h-8 absolute right-4 top-4 text-neutral-500 hover:bg-neutral-100 rounded-full flex justify-center items-center'><BsBookmark size={12}/></button>
-        <div className='w-10 h-10 rounded-lg flex justify-center items-center bg-[#ECEDF2] text-[#1A67D3] hover:bg-blue-600 hover:text-white'>   
+        <div className='w-10 min-w-[40px] h-10 min-h-[40px] rounded-lg flex justify-center items-center bg-[#ECEDF2] text-[#1A67D3] hover:bg-blue-600 hover:text-white'>
+          N0 
         </div>
-        <div className='min-w-[calc(500px-44px)] w-[calc(100%-44px)] ml-2 pl-[12px]'>
+        <div className='min-w-[calc(500px-56px)] w-[calc(100%-56px)] pl-[12px]'>
             <h2 className='text-[12px] font-[700]'>
-              <Link href={'/'}>{feature.post}</Link>
+              <Link href={'/job/1'}>{feature.post}</Link>
             </h2>
             <div className='flex items-center py-2 text-zinc-500 text-[10px]'>
               <div className='flex items-center mr-3 text-[12px]'>
@@ -64,8 +65,8 @@ const FeaturedItem: React.FC<FeatureItemProps> = ({feature}) => {
                 Urgent
               </span>)}
             </div>
-            <div className={styles.featureditemDescription + ' w-full text-neutral-500 mt-3 leading-6'}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis et minima ratione expedita commodi temporibus sint obcaecati enim, adipisci ducimus soluta non unde illum accusantium reprehenderit delectus iste, ut dolor.</p>
+            <div className={styles.featureditemDescription + ' w-full text-neutral-500 mt-3 leading-6 pr-3'}>
+              <p className='w-full'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis et minima ratione expedita commodi temporibus sint obcaecati enim, adipisci ducimus soluta non unde illum accusantium reprehenderit delectus iste, ut dolor.</p>
             </div>
         </div>
     </div>

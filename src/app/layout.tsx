@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ReduxProvider>
-        <body className={futura_now_var.className+` text-xs font-[500] text-black`}>{children}</body>
+        <body className={futura_now_var.className+` text-[15px] leading-6 font-[500] text-black`}>{children}</body>
       </ReduxProvider>
     </html>
   )

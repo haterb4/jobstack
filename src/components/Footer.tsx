@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
         {footerLinks.map((footerLink, index) => {
           return (
-            <div key={index}>
+            <div key={index} className='min-w-[150px]'>
               <h1 className='mb-4'>{footerLink.header}</h1>
               {footerLink.links.map((link, index) => {
                 return (

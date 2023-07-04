@@ -1,15 +1,19 @@
 'use client'
 
-import { Filter, PageLayout, Searchbar, Select } from '@/components'
+import { Filter, PageLayout, Pagination, Searchbar, Select } from '@/components'
 import FeaturedItem from '@/components/Job/FeaturedItem'
 import { featuredJobs } from '@/data/features'
-import React, { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
+import React, { useEffect, useRef, useState } from 'react'
 
 const Page = () => {
+  const searchParams = useSearchParams()
   const [jobTime, setJobTime] = useState('New job')
   const [itemsNumber, setItemsNumber] = useState(10)
   const jobTimeTable = ['New jobs', 'Recent Jobs', 'Old Jobs']
   const itemsNumberTable = [10, 25, 40]
+  const activePage = searchParams.get('page')
+  const currentPage = activePage? Number(activePage) : 1
   return (
     <PageLayout>
         <main className='full overflow-hidden'>
@@ -37,7 +41,7 @@ const Page = () => {
                   )
                 })}
                 {/* pagination */}
-                <div></div>
+                <Pagination active={currentPage} plage={{start: 1, end: 3, all: 495}} path='/search'/>
               </div>
             </div>
            </div>

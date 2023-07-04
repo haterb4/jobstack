@@ -17,7 +17,7 @@ const Features = () => {
           {featuredJobs.map((item, index) => {
             return (
               width > 1100 
-              ?(<FeaturedItem key={index} feature={item}/>)
+              ?(<div className='w-[500px] key={index}'><FeaturedItem feature={item}/></div>)
               :(<JobCard key={index} feature={item}/>)
            )
           })}
