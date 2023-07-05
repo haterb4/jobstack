@@ -8,8 +8,8 @@ interface HeaderProps {
 const SectionHeader: React.FC<HeaderProps> = ({title, slogan}) => {
   return (
     <div className='flex flex-col item-center justify-center text-center'>
-        <h1 className='text-xl font-semibold'>{title}</h1>
-        <p className='text-xs text-zinc-600 mt-3'>{slogan}</p>
+        <h1 className='text-3xl font-semibold'>{title}</h1>
+        <p className='text-base text-zinc-600 mt-3'>{slogan}</p>
     </div>
   )
 }

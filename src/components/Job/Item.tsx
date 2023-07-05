@@ -16,7 +16,7 @@ const Item: React.FC<ItemInterface>  = ({categorie}) => {
         <categorie.icon size={32}/>
       </div>
       <div className='w-[calc(310px-64px)] px-4'>
-        <h2 className='text-[12px] font-[700]'>{categorie.title}</h2>
+        <h2 className='text-lg font-[700]'>{categorie.title}</h2>
         <p className='mt-[8px] text-zinc-500'>({categorie.position} {`opened position${categorie.position > 1 && 's'}`})</p>
       </div>
     </div>
