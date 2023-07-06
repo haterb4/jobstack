@@ -5,6 +5,7 @@ import { BsBookmark, BsClock } from 'react-icons/bs'
 import { FaMoneyBillWave } from 'react-icons/fa'
 import Link from 'next/link'
 import styles from '@/styles/featureditem.module.css'
+import Image from 'next/image'
 interface FeatureItemProps {
     feature: {
         entreprise: string;
@@ -29,8 +30,12 @@ const FeaturedItem: React.FC<FeatureItemProps> = ({feature}) => {
   return (
     <div className={styles.featureditem +' min-w-[500px] w-full border rounded-md bg-white hover-shadow-1 py-8 flex justify-start items-start px-4 relative'}>
         <button className='w-8 h-8 absolute right-4 top-4 text-neutral-500 hover:bg-neutral-100 rounded-full flex justify-center items-center'><BsBookmark size={12}/></button>
-        <div className='w-10 min-w-[40px] h-10 min-h-[40px] rounded-lg flex justify-center items-center bg-[#ECEDF2] text-[#1A67D3] hover:bg-blue-600 hover:text-white'>
-          N0 
+        <div className='w-10 min-w-[40px] h-10 min-h-[40px] rounded-lg flex justify-center items-center bg-[#ECEDF2] text-[#1A67D3] hover:bg-blue-600 hover:text-white relative'>
+          <Image
+            src={'/images/companies/'+feature.logo}
+            alt={feature.entreprise+' logo'}
+            fill
+          />
         </div>
         <div className='min-w-[calc(500px-56px)] w-[calc(100%-56px)] pl-[12px]'>
             <h2 className='text-lg font-[700]'>
