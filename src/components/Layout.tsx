@@ -3,14 +3,16 @@ import Navigation from './Navigation'
 import Footer from './Footer'
 
 const PageLayout = ({
-    children
+    children,
+    nav
 }: {
-    children: React.ReactNode
+    children: React.ReactNode;
+    nav?: string;
 }) => {
   return (
     <div className='overflow-hidden min-h-screen w-full flex flex-col justify-between items-center'>
         {/* header */}
-        <div className='w-full relative'>
+        <div className={`w-full relative ${nav && nav}`}>
           <Navigation />
         </div>
         <main className='w-full h-full overflow-x-hidden m-auto mt-0 mx-0'>{children}</main>
