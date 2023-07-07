@@ -22,8 +22,8 @@ const NavLink = ({link}: {link: NavigationLink;}) => {
             <div className='w-full relative z-50'>
                 <div className='w-[12px] h-[12px] rotate-45 absolute top-[-4px] left-5 bg-[#1967D3]'></div>
                 <div className='w-full h-[3px] bg-[#1967D3] z-20 relative'></div>
-                <div className='px-[0.5px] z-[999] relative bg-white'>
-                    <div className='w-full flex justify-between relative py-4 border-t-0 border rounded-b'>
+                <div className='px-[0.5px] z-[999] relative bg-white rounded-b-sm'>
+                    <div className='w-full flex justify-between relative py-4 border-t-0 rounded-b'>
                         {link.sublinks && link.sublinks.map((sublink, index) => {
                             return (
                                 <div key={index} className='px-4 w-full'>

@@ -12,7 +12,7 @@ const Header = () => {
   const [jobTitle, setJobTitle] = useState('')
   const [postCode, setPostCode] = useState('')
   return (
-    <div className={`h-[550px] w-full flex flex-col justify-center bg-gradient-to-r from-blue-50 to-sky-200`}>
+    <div className={`h-[550px] w-full flex flex-col justify-center bg-gradient-to-r from-blue-50 to-sky-50`}>
       <div className={`h-full bg-[url(/images/header/large-image.png)] bg-contain bg-right bg-no-repeat w-full flex flex-col justify-center ${width < 900 ? 'items-center px-12' : 'items-start px-[17%]'}`}>
         <div className={`${width < 650 ? 'w-full' : 'w-[600px]'}`}>
           <h1 className='text-5xl leading-[4rem]'>The are 93,178 Posting here for you! </h1>
