@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 
@@ -25,7 +26,13 @@ const JobCard: React.FC<FeatureItemProps> = ({feature}) => {
   return (
     <div className='border w-[300px] h-[280px] flex flex-col justify-center items-center px-4 relative'>
         <div className='flex flex-col justify-center items-center'>
-            <div className='w-20 h-20 rounded-full flex justify-center items-center bg-[#ECEDF2] text-[#1A67D3] hover:bg-blue-600 hover:text-white' />
+            <div className='w-20 h-20 rounded-full flex justify-center items-center relative' >
+            <Image
+                src={'/images/companies/'+feature.logo}
+                alt={feature.entreprise+' logo'}
+                fill
+            />
+            </div>
             <div className='w-full flex justify-center items-center mr-3 text-[12px] text-center py-2'>
                 <span className='text-center text-green-500'>{feature.entreprise}</span>
             </div>

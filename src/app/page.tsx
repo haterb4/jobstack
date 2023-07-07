@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <PageLayout nav='bg-gradient-to-r from-[#F2F5FC] to-blue-50'>
+    <PageLayout nav={{bg: 'bg-gradient-to-r from-[#F2F5FC] to-blue-50'}}>
       <main className="full overflow-hidden">
         <Header />
         <div className='w-full flex flex-col justify-center items-center border-b'>

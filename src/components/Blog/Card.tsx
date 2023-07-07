@@ -15,7 +15,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({article}) => {
   return (
     <div className='my-8'>
-      <div className='w-[380px] h-[415px] bg-white p-3 rounded-lg'>
+      <div className='w-full md:w-[380px] min-h-[415px] bg-white p-3 rounded-lg'>
         <div className='w-full h-[195px] rounded-lg bg-zinc-200 relative'>
           <Image
             className='rounded-lg'

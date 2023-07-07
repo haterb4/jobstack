@@ -3,8 +3,8 @@ import React from 'react'
 
 const layout = () => {
   return (
-    <PageLayout>
-      
+    <PageLayout nav={{shadow: true}}>
+      <main></main>
     </PageLayout>
   )
 }

@@ -13,9 +13,9 @@ const Header = () => {
   const [postCode, setPostCode] = useState('')
   return (
     <div className={`h-[550px] w-full flex flex-col justify-center bg-gradient-to-r from-blue-50 to-sky-50`}>
-      <div className={`h-full bg-[url(/images/header/large-image.png)] bg-contain bg-right bg-no-repeat w-full flex flex-col justify-center ${width < 900 ? 'items-center px-12' : 'items-start px-[17%]'}`}>
+      <div className={`h-full bg-[url(/images/header/large-image.png)] bg-contain bg-right bg-no-repeat w-full flex flex-col justify-center ${width < 450 ? 'px-3' : width < 900 ? 'items-center px-12' : 'items-start px-[17%]'}`}>
         <div className={`${width < 650 ? 'w-full' : 'w-[600px]'}`}>
-          <h1 className='text-5xl leading-[4rem]'>The are 93,178 Posting here for you! </h1>
+          <h1 className='text-3xl leading-[3rem] md:text-5xl md:leading-[4rem]'>The are 93,178 Posting here for you! </h1>
           <p className='text-neutral-400 mt-3'>Find jobs, Employement & Career Opportunities</p>
           <div className='mt-12 w-full'>
             <div className={`${width < 650 ? 'w-full flex-col px-4' : 'w-[600px] h-[80px] justify-between'} border flex items-center py-3 bg-white px-4 rounded-md shadow-md`}>

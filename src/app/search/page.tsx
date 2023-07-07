@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const Page = () => {
   
   return (
-    <PageLayout>
+    <PageLayout nav={{shadow: true}}>
         <main className='full overflow-hidden'>
             <header className='w-full flex justify-center items-center bg-gradient-to-r from-[#F2F5FC] to-blue-100 px-12 py-16'>
                 <Searchbar />

@@ -65,7 +65,7 @@ const Categories = () => {
   return (
     <div className='py-12 bg-white'>
         <SectionHeader title='Popular Job Categories' slogan='2023 jobs live -293 added today.'/>
-        <div className={`grid ${width < 710 ? 'grid-cols-1' : width > 1100 ? 'grid-cols-3' : 'grid-cols-2'} gap-8 py-12`}>
+        <div className={`grid ${width < 710 ? 'grid-cols-1' : width > 1100 ? 'grid-cols-3' : 'grid-cols-2'} gap-4 md:gap-8 py-12 px-3 md:px-0`}>
           {categories.map((item, index) => {
             return <JobCategorieItem key={index} categorie={item}/>
           })}

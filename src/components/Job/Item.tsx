@@ -11,7 +11,7 @@ interface ItemInterface {
 
 const Item: React.FC<ItemInterface>  = ({categorie}) => {
   return (
-    <div className='w-[310px] p-3 border rounded-lg flex justify-between items-center hover:shadow-md'>
+    <div className='w-full md:w-[310px] p-3 border rounded-lg flex justify-between items-center hover:shadow-md'>
       <div className='w-16 h-16 rounded-lg flex justify-center items-center bg-[#ECEDF2] text-[#1A67D3] hover:bg-blue-600 hover:text-white'>
         <categorie.icon size={32}/>
       </div>
