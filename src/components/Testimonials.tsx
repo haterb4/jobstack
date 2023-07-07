@@ -36,7 +36,8 @@ const Testimonials = () => {
             entreprise: 'Great quality',
             user: {
                 name: 'Gabriel Nolan',
-                poste: 'Consultant'
+                poste: 'Consultant',
+                profile: 'anzie.png'
             },
             comment: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality"
         },
@@ -44,7 +45,8 @@ const Testimonials = () => {
             entreprise: 'Great quality',
             user: {
                 name: 'Gabriel Nolan',
-                poste: 'Consultant'
+                poste: 'Consultant',
+                profile: 'profile3.jpg'
             },
             comment: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality"
         },
@@ -52,7 +54,8 @@ const Testimonials = () => {
             entreprise: 'Great quality',
             user: {
                 name: 'Gabriel Nolan',
-                poste: 'Consultant'
+                poste: 'Consultant',
+                profile: 'profile1.jpg'
             },
             comment: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality"
         },
@@ -60,7 +63,8 @@ const Testimonials = () => {
             entreprise: 'Great quality',
             user: {
                 name: 'Gabriel Nolan',
-                poste: 'Consultant'
+                poste: 'Consultant',
+                profile: 'profile2.jpeg'
             },
             comment: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality"
         },
@@ -68,7 +72,8 @@ const Testimonials = () => {
             entreprise: 'Great quality',
             user: {
                 name: 'Gabriel Nolan',
-                poste: 'Consultant'
+                poste: 'Consultant',
+                profile: 'profile3.jpg'
             },
             comment: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality"
         },
@@ -76,7 +81,8 @@ const Testimonials = () => {
             entreprise: 'Great quality',
             user: {
                 name: 'Gabriel Nolan',
-                poste: 'Consultant'
+                poste: 'Consultant',
+                profile: 'profile1.jpg'
             },
             comment: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite... the Mitech team works really hard to ensure high level of quality"
         },

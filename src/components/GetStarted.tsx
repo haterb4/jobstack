@@ -10,11 +10,9 @@ const GetStarted = () => {
     const { width, height } = useWindowSize()
   return (
     <div className={`w-full`}>
-        <div className='py-8 mb border-b mb-20'>
-
-        </div>
+        <div className='py-8 mb border-b mb-20'></div>
         <div className={`w-full flex  justify-center ${width < 1100 ? 'flex-col-reverse items-center' : 'items-start'}`}>
-            <div className='w-[450px] h-[480px] border rounded-md bg-zinc-200 relative my-4'>
+            <div className='w-[450px] h-[480px] border rounded-md bg-[url(/images/features/find.jpg)] bg-cover bg-center bg-no-repeat relative my-4'>
                 <div className={`w-[250px] h-[120px] absolute ${width < 1100 ? 'top-[280px] right-[100px]': '-right-36 -bottom-9'}   border rounded-md`}>
                     <div className='bg-white w-full h-full relative rounded-md'>
                         <div className='w-14 h-14 rounded-full flex justify-center items-center text-white bg-blue-600 absolute -top-6 -left-5'>

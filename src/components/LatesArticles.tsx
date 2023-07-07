@@ -9,22 +9,22 @@ const LatesArticles = () => {
   const { width, height } = useWindowSize()
   const articles = [
     {
-      title: 'Attract sales and profits',
-      coverImage: 'Great quality',
+      title: 'Must wanted skills in computer science',
+      coverImage: 'mutuelle-entreprise.jpg',
       intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite...",
       comments: 12,
       postedAt: 'August 31, 2021'
     },
     {
-      title: 'Attract sales and profits',
-      coverImage: 'Great quality',
+      title: 'Be happy with beautifull office design',
+      coverImage: 'pexels-huseyn-kamaladdin.jpg',
       intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite...",
       comments: 12,
       postedAt: 'August 31, 2021'
     },
     {
-      title: 'Attract sales and profits',
-      coverImage: 'Great quality',
+      title: 'Grow up your taxi business',
+      coverImage: 'taxi-jaune-miami-beach.jpg',
       intro: "Whithout Brad i'd be homeless, they found me a job and got me sorted out quickly with everything Can't quite...",
       comments: 12,
       postedAt: 'August 31, 2021'

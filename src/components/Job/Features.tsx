@@ -11,9 +11,9 @@ const Features = () => {
   const { width, height } = useWindowSize()
   
   return (
-    <div className='py-12 bg-white'>
+    <div className='w-full py-12 bg-white flex flex-col items-center'>
         <SectionHeader title='Featured Job' slogan='Knew your worth and find the job that qualify your life'/>
-        <div className={`grid ${width < 710 ? 'grid-cols-1' : 'grid-cols-2'} gap-8 py-12`}>
+        <div className={`grid ${width < 710 ? 'grid-cols-1' : 'grid-cols-2'} gap-8 py-12 content-center`}>
           {featuredJobs.map((item, index) => {
             return (
               width > 1100 
