@@ -48,7 +48,7 @@ const Header = () => {
                 </div>
               </div>
               <div className='flex justify-center items-center w-[150px]'>
-                <Link href={`/search/?jobt-tile=${jobTitle}&post-code=${postCode}`} className="px-8 py-3 pt-4 rounded-md bg-blue-600 text-white capitalize">
+                <Link href={`/jobs-list/?title=${jobTitle}&postcode=${postCode}&page=1`} className="px-8 py-3 pt-4 rounded-md bg-blue-600 text-white capitalize">
                   Find jobs
                 </Link>
               </div>

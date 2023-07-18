@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 
@@ -24,7 +25,7 @@ interface FeatureItemProps {
 
 const JobCard: React.FC<FeatureItemProps> = ({feature}) => {
   return (
-    <div className='border w-[300px] h-[280px] flex flex-col justify-center items-center px-4 relative'>
+    <Link href={'/jobs-list/job/1'} className='border w-[300px] h-[280px] flex flex-col justify-center items-center px-4 relative'>
         <div className='flex flex-col justify-center items-center'>
             <div className='w-20 h-20 rounded-full flex justify-center items-center relative' >
             <Image
@@ -69,7 +70,7 @@ const JobCard: React.FC<FeatureItemProps> = ({feature}) => {
              Urgent
             </span>
         </div>)}
-    </div>
+    </Link>
   )
 }
 

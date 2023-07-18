@@ -6,105 +6,12 @@ import { useWindowSize } from 'usehooks-ts'
 import { AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
 import NavLinkLatteral from './NavLinkLatteral'
+import links from '@/data/navigation'
 
 const NavLinks = () => {
   const { width, height } = useWindowSize()
   const [isMiddleNav, setIsMiddleNav] = useState(false)
 
-  const links = [
-    {
-        name: 'Find Jobs',
-        href: '/jobs',
-        dropdown: true,
-        size: 'large',
-        sublinks: [
-            {
-                header: 'Jobs Listing',
-                links: [
-                    {name: 'About Us', href: '/about', dropdown: true,},
-                    {name: 'Contact', href: '/about', dropdown: false,},
-                    {name: 'Job Packages', href: '/about', dropdown: true,},
-                    {name: 'How It Works', href: '/about', dropdown: true,},
-                    {name: "FAQ's", href: '/about', dropdown: false,},
-                    {name: "Terms and Conditions", href: '/about', dropdown: false,},
-                    {name: "404 page", href: '/about', dropdown: false,},
-                ]
-            },
-            {
-                header: 'Jobs Single',
-                links: [
-                    {name: 'About Us', href: '/about', dropdown: true,},
-                    {name: 'Contact', href: '/about', dropdown: false,},
-                    {name: 'Job Packages', href: '/about', dropdown: true,},
-                    {name: 'How It Works', href: '/about', dropdown: true,},
-                    {name: "FAQ's", href: '/about', dropdown: false,},
-                    {name: "Terms and Conditions", href: '/about', dropdown: false,},
-                    {name: "404 page", href: '/about', dropdown: false,},
-                ]
-            },
-            {
-                header: 'Jobs By Types',
-                links: [
-                    {name: 'About Us', href: '/about', dropdown: true,},
-                    {name: 'Contact', href: '/about', dropdown: false,},
-                    {name: 'Job Packages', href: '/about', dropdown: true,},
-                    {name: 'How It Works', href: '/about', dropdown: true,},
-                    {name: "FAQ's", href: '/about', dropdown: false,},
-                    {name: "Terms and Conditions", href: '/about', dropdown: false,},
-                    {name: "404 page", href: '/about', dropdown: false,},
-                ]
-            }
-            ,
-            {
-                header: 'Jobs By Cities',
-                links: [
-                    {name: 'About Us', href: '/about', dropdown: true,},
-                    {name: 'Contact', href: '/about', dropdown: false,},
-                    {name: 'Job Packages', href: '/about', dropdown: true,},
-                    {name: 'How It Works', href: '/about', dropdown: true,},
-                    {name: "FAQ's", href: '/about', dropdown: false,},
-                    {name: "Terms and Conditions", href: '/about', dropdown: false,},
-                    {name: "404 page", href: '/about', dropdown: false,},
-                ]
-            }
-        ]
-    },
-    {
-        name: 'Employers',
-        href: '/employers',
-        dropdown: false,
-    },
-    {
-        name: 'Candidates',
-        href: '/canditates',
-        dropdown: false,
-    },
-    {
-        name: 'Blog',
-        href: '/blog',
-        dropdown: false,
-    },
-    {
-        name: 'Pages',
-        href: '/pages',
-        dropdown: true,
-        size: 'small',
-        sublinks: [
-            {
-                header: 'nothing',
-                links: [
-                    {name: 'About Us', href: '/about', dropdown: true,},
-                    {name: 'Contact', href: '/about', dropdown: false,},
-                    {name: 'Job Packages', href: '/about', dropdown: true,},
-                    {name: 'How It Works', href: '/about', dropdown: true,},
-                    {name: "FAQ's", href: '/about', dropdown: false,},
-                    {name: "Terms and Conditions", href: '/about', dropdown: false,},
-                    {name: "404 page", href: '/about', dropdown: false,},
-                ]
-            }
-        ]
-    },
-  ]
   return (
     <div className='flex items-center'>
         {width > 1200 && links.map((link, index) => {
@@ -122,7 +29,7 @@ const NavLinks = () => {
                 <button onClick={() => setIsMiddleNav(false)} className='relative z-50 text-white h-10 w-10 border rounded-md ml-2 mt-2 flex justify-center items-center mb-3'>
                     <AiOutlineClose size={26}/>
                 </button>
-                <div className='h-[calc(100%-44px)] relative text-white  overflow-y-scroll'>
+                <div className='h-[calc(100%-44px)] relative text-white border  overflow-y-scroll'>
                     {links.map((link, index) => {
                         return (
                             <div className='w-full relative' key={index}>

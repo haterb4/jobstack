@@ -16,7 +16,21 @@ const NavLink = ({link}: {link: NavigationLink;}) => {
   useOnClickOutside(ref, handleClickOutside)
   return (
     <div className='px-6 py-4 flex flex-col relative'>
-        <button ref={ref} onClick={() => setIsClosed(!isClosed)} className='w-full flex justify-between items-center hover:text-[#1967D3]'>{link.name} {link.dropdown && <IoChevronDown className='ml-3'/>}</button>
+        {!link.dropdown && (
+            <Link href={link.href} 
+                className='w-full flex justify-between items-center hover:text-[#1967D3]'
+            >
+                {link.name} {link.dropdown && <IoChevronDown className='ml-3'/>}
+            </Link>
+        )}
+        {link.dropdown && (
+            <button ref={ref}
+                onClick={() => setIsClosed(!isClosed)}
+                className='w-full flex justify-between items-center hover:text-[#1967D3]'
+            >
+                {link.name} {link.dropdown && <IoChevronDown className='ml-3'/>}
+            </button>
+        )}
         {link.dropdown &&(
         <div className={`absolute ${isClosed && 'hidden'} top-[50px] left-0`}>
             <div className='w-full relative z-50'>

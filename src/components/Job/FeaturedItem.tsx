@@ -39,7 +39,7 @@ const FeaturedItem: React.FC<FeatureItemProps> = ({feature}) => {
         </div>
         <div className='min-w-[calc(500px-56px)] w-[calc(100%-56px)] pl-[12px]'>
             <h2 className='text-lg font-[700]'>
-              <Link href={'/job/1'}>{feature.post}</Link>
+              <Link href={'/jobs-list/job/1'}>{feature.post}</Link>
             </h2>
             <div className='flex items-center py-2 text-zinc-500 text-[10px]'>
               <div className='flex items-center mr-3 text-[12px]'>
