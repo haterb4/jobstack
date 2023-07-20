@@ -1,10 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
-
-const Logo = ({href, justify, box}: {href: string; justify?: string; box?: string}) => {
+interface LogoProps {
+  href: string; 
+  justify?: string;
+  box?: string;
+  container?: string;
+}
+const Logo: React.FC<LogoProps> = (props) => {
   return (
-    <Link href={href} className={`py-4 mr-4 flex items-center justify-${justify ? justify : 'between'}`}>
-        <div className={`${box ? box : "h-8 w-8"} flex justify-center items-center bg-[#1967D3] text-white rounded-[10px]`}>JoS</div>
+    <Link href={props.href} className={`py-4 mr-4 flex items-center justify-${props?.justify ? props?.justify : 'between'} ${props?.container}`}>
+        <div className={`${props?.box ? props?.box : "h-8 w-8"} flex justify-center items-center bg-[#1967D3] text-white rounded-[10px]`}>JoS</div>
         <span className='px-2 ml-2 font-bold text-sm'>Jobstack</span>
     </Link>
   )

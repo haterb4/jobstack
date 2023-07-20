@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+* {
+  transform-style: preserve-3d;
+}
+
+:root {
+  --duration: 3.2s;
+  --stagger: .65s;
+  --easing: cubic-bezier(.36,.07,.25,1);
+  --offscreen: 130vmax;
+  /*cubic-bezier(.5, 0, .4, 1);*/
+  --color-bg: #EF735A;
+  --color-blue: #384969;
+  --color-shadow: #211842;
+}
+
+
 /**/
 .toggle-switch {
   position: relative;
